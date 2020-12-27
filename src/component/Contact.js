@@ -2,6 +2,7 @@ import React from 'react'
 import {useSelector} from "react-redux";
 import { Cont } from './Cont';
 
+
 const Contact = () => {
 
 const contacts = useSelector(state=>state.contactreducer. contact);
@@ -22,6 +23,8 @@ console.log(contacts);
       <th scope="col">Name</th>
       <th scope="col">phone</th>
       <th scope="col">email</th>
+      <th scope="col">action</th>
+    
     </tr>
   </thead>
   <tbody>

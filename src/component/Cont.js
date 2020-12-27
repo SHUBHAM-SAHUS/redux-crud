@@ -1,5 +1,7 @@
 import React from "react";
-import Avatar from 'react-avatar'
+import Avatar from 'react-avatar';
+import {GrEdit} from "react-icons/gr";
+import{AiFillDelete} from "react-icons/ai";
 
 export const Cont = ({ val }) => {
   const { name, phone, email } = val;
@@ -12,9 +14,14 @@ export const Cont = ({ val }) => {
             <label className="custom-control-label"> </label>
           </div>
         </td>
-        <td> <Avatar size="45px" round={true}/> {val.name} </td>
+        <td> <Avatar name={name} size="45px" round={true}/> {val.name} </td>
         <td>{val.phone}</td>
         <td>{val.email}</td>
+         <td className="action">  
+          <GrEdit className="text-primary font-weight-bold"/>
+          <AiFillDelete className="ml-3 text-danger font-weight-bold"/>
+
+         </td>
       </tr>
     </>
   );
