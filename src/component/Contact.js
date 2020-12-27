@@ -10,7 +10,7 @@ console.log(contacts);
     return (
            <>
           <div>
-          <table class="table table-striped ">
+          <table className="table table-striped ">
   <thead>
     <tr>
       <th scope="col">
@@ -31,7 +31,7 @@ console.log(contacts);
   {
     contacts.map(val=>(
    
-      <Cont val={val}/>
+      <Cont val={val} key={val.id}/>
 
     ))
   }

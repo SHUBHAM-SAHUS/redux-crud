@@ -1,3 +1,4 @@
+import { CREATE_CONTACT } from "../type";
 
  const intialState ={
 
@@ -239,11 +240,17 @@
 
      export  const contactreducer=(state=intialState,action)=>{
           switch(action.type){
+          
+             case  CREATE_CONTACT:
+               return{
+                 ...state,
+                  contact:[action.payload,...state.contact]
+               }
+              
                 default:
                 return state;
           }
 
       }
-
 
 
